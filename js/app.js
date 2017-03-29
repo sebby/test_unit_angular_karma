@@ -15,4 +15,9 @@ app.factory('Social', function($http, $q){
     }
   }
 });
-
+app.controller('ImageCtrl', function($scope){
+  $scope.images = [];
+  $scope.deleteImage =  function(image){
+    $scope.images.splice($scope.images.indexOf(image),1);
+  };
+});
