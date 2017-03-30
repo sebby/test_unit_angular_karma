@@ -1,4 +1,4 @@
-describe.only('Image Controller', function () {
+describe('Image Controller', function () {
   var scope;
 
   beforeEach(function () {
@@ -13,7 +13,7 @@ describe.only('Image Controller', function () {
   it('should have images', function () {
       expect(scope.images).to.be.eql([]);
   });
-  it('should delete images', function(){
+  it('should delete image', function(){
     var image = {};
     scope.images = [{}, image, {}];
     scope.deleteImage(image);
