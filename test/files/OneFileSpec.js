@@ -1,4 +1,4 @@
-describe.only('One file for application app', function(){
+describe('One file for application app', function(){
   var scope;
   beforeEach(function () {
     angular.mock.module('myApp.controllers');
