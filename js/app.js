@@ -20,7 +20,16 @@ app.controller('ImageCtrl', function ($scope) {
   $scope.deleteImage = function (image) {
     $scope.images.splice($scope.images.indexOf(image), 1);
   };
-});
+  $scope.getHello =  function(){
+      return $scope.getWorld() + $scope.getWorld2();
+  };
+  $scope.getWorld  = function(){
+    return 'to';
+  }
+
+  $scope.getWorld2  = function(){
+    return 'to';
+  }});
 
 app.directive('alerts', function () {
   return{
@@ -29,8 +38,8 @@ app.directive('alerts', function () {
     scope : {
       messages: '=msgs'
     },
-    link:function(scoope,element,attrs){
-
+    link:function(scope,element,attrs){
+      scope.demo = 1;
     }
   }
 });
